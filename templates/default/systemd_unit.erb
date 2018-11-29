@@ -17,6 +17,7 @@ WorkingDirectory=<%= @path_home %>
 User=<%= @es_user %>
 Group=<%= @es_group %>
 
+ExecStop=/usr/bin/monit stop elasticsearch
 ExecStartPre=<%= @path_home %>/bin/elasticsearch-systemd-pre-exec
 
 ExecStart=<%= @path_home %>/bin/elasticsearch \
